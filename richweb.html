@@ -1,0 +1,31 @@
+<head>
+  <title>Rich Web Assign</title>
+</head>
+
+<body>
+{{loginButtons}}
+	{{> login}}
+{{> messages}}
+
+</body>
+
+<template name="login">
+	<h1>Chat System</h1>
+<br>
+	<input type="text" id="username" placeholder="Username..">
+<br>
+	<input type="text" id="messagebox" placeholder="Message">
+<br>
+<input type="button" value="Send Message!" id="button">
+<br>
+</template>
+
+<template name="messages">
+	{{#each messages}}
+		{{> message}}
+	{{/each}}
+</template>
+
+<template name="message">
+	<p><strong> {{name}}:</strong>  {{message}}</p>
+</template>
