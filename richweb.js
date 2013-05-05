@@ -1,5 +1,4 @@
 Message = new Meteor.Collection('messages');
-Coluser = new Meteor.Collection('ids');
 
 if (Meteor.isClient) {
 
