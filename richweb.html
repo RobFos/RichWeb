@@ -32,6 +32,8 @@
 <input type="button" value="Send Message!" id="button">
 <br>
 {{/if}}
+
+
 </template>
 
 <template name="users">
@@ -49,6 +51,7 @@
 <template name="messages">
 	{{#each messages}}
 		{{> message}}
+		{{check}}
 		<hr>
 	{{/each}}
 </template>

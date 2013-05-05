@@ -37,6 +37,12 @@ Template.login.checkLog=function(){
 	}
 };
 
+Template.messages.check=function(){
+	var div=$("#chat");
+				div.animate({scrollTop:
+					div.prop("scrollHeight")});
+};
+
 //get all the messages
 Template.messages.messages = function(){
 	var div=$("#chat");
