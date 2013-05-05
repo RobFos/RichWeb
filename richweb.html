@@ -2,30 +2,59 @@
   <title>Rich Web Assign</title>
 </head>
 
-<body>
-{{loginButtons}}
-	{{> login}}
-{{> messages}}
+<body> 
+<center>
+<h1>Chat System</h1>
 
+{{loginButtons}}
+<br>
+<table><tr><td>
+  <h3>Users:</h3>
+	{{> users}}
+
+</td><td>
+	<div id="chat">{{> messages}}</div>
+</td></tr>
+</table>
+
+	{{> login}}
+
+</center>
 </body>
 
 <template name="login">
-	<h1>Chat System</h1>
+{{#if checkLog}}
+
 <br>
-	<input type="text" id="username" placeholder="Username..">
-<br>
-	<input type="text" id="messagebox" placeholder="Message">
+<textarea id="messagebox" placeholder="Message....." rows="4" cols="50">
+</textarea>
 <br>
 <input type="button" value="Send Message!" id="button">
 <br>
+{{/if}}
+</template>
+
+<template name="users">
+	{{#each allusers}}
+		{{> getuser}}
+<br>
+
+	{{/each}}
+</template>
+
+<template name="getuser">
+		{{username}}
 </template>
 
 <template name="messages">
 	{{#each messages}}
 		{{> message}}
+		<hr>
 	{{/each}}
 </template>
 
 <template name="message">
-	<p><strong> {{name}}:</strong>  {{message}}</p>
+	<p><font color="blue"> {{name}}:</font>  {{message}}</p>
 </template>
+
+

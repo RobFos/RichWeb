@@ -4,7 +4,22 @@ body {
     background-color: #f4f4f4;
     font-family: Helvetica, Arial, sans-serif;
 }
+h1{
+	color:blue;
+}
+h3{
+	color:blue;
+}
 
+#chat{
+	text-align:left;
+	width:500px;
+	height:200px;
+	border: 1px solid black;
+	padding: 5px;
+	overflow:scroll;
+	background-color:white;
+}
 input#messagebox{
 	width:500px;
 	height:100px;
