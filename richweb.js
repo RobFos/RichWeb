@@ -7,6 +7,7 @@ Accounts.ui.config(
 	passwordSignupFields:'USERNAME_ONLY'
 });
 
+//check if user sent a message
 Template.login.events = {
 	'click #button':function(){
 		var user=Meteor.user().username;
@@ -37,6 +38,7 @@ Template.login.checkLog=function(){
 	}
 };
 
+//scroll down
 Template.messages.check=function(){
 	var div=$("#chat");
 				div.animate({scrollTop:
